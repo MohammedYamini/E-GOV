@@ -1,0 +1,49 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+section {
+    display: table;
+  }
+
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+  .success-snackbar {
+    background-color: #4caf50; /* Green color for success */
+    color: white;
+  }
+  .success-icon {
+    font-size: 26px;
+    color: #4caf50;
+  }
+
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    width: 50% !important;
+    box-shadow: var(--mdc-dialog-container-elevation, 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12));
+}
