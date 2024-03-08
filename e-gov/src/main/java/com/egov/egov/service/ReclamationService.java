@@ -43,24 +43,24 @@ public class ReclamationService {
             if (reclamation.getMatriculation_interior() != null &&
                     reclamation.getMatriculation_number() != null &&
                     reclamation.getAddress() != null &&
-                    reclamation.getEnd_of_validity() != null &&
+                    reclamation.getParticular_vehicle() != null &&
                     reclamation.getFirst_time_in_circulation() != null &&
                     reclamation.getMutation() != null &&
                     reclamation.getFirst_use_in_morocco() != null &&
                     reclamation.getOwner() != null &&
                     reclamation.getType_of_usage() != null &&
-                    reclamation.getStart_of_validation() != null) {
+                    reclamation.getParticular_vehicle() != null) {
 
                 exist_reclamation.setAddress(reclamation.getAddress());
                 exist_reclamation.setMatriculation_number(reclamation.getMatriculation_number());
-                exist_reclamation.setEnd_of_validity(reclamation.getEnd_of_validity());
+                exist_reclamation.setParticular_vehicle(reclamation.getParticular_vehicle());
                 exist_reclamation.setFirst_time_in_circulation(reclamation.getFirst_time_in_circulation());
                 exist_reclamation.setMutation(reclamation.getMutation());
                 exist_reclamation.setMatriculation_interior(reclamation.getMatriculation_interior());
                 exist_reclamation.setFirst_use_in_morocco(reclamation.getFirst_use_in_morocco());
                 exist_reclamation.setOwner(reclamation.getOwner());
                 exist_reclamation.setType_of_usage(reclamation.getType_of_usage());
-                exist_reclamation.setStart_of_validation(reclamation.getStart_of_validation());
+                exist_reclamation.setParticular_vehicle(reclamation.getParticular_vehicle());
             }
 
             return reclamationDao.save(exist_reclamation);

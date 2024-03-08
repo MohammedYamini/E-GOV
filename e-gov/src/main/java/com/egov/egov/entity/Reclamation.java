@@ -19,7 +19,7 @@ public class Reclamation {
     private Date first_time_in_circulation;
     private Date first_use_in_morocco;
     private Date mutation;
-    private Date start_of_validation;
+    private String particular_vehicle;
     private String address;
     private Date end_of_validity;
     private String type_of_usage;
@@ -84,12 +84,12 @@ public class Reclamation {
         this.mutation = mutation;
     }
 
-    public Date getStart_of_validation() {
-        return start_of_validation;
+    public String getParticular_vehicle() {
+        return particular_vehicle;
     }
 
-    public void setStart_of_validation(Date start_of_validation) {
-        this.start_of_validation = start_of_validation;
+    public void setParticular_vehicle(String particular_vehicle) {
+        this.particular_vehicle = particular_vehicle;
     }
 
     public String getAddress() {

@@ -18,4 +18,12 @@ export class ReclamationService {
     public indexReclamation(): Observable<Reclamation[]>{
         return this.httpClient.get<Reclamation[]>(`${this.api}/all/reclamations`);
     }
+
+    public deleteReclamation(id: number){
+        return this.httpClient.delete(`${this.api}/delete/reclamation/${id}`)
+    }
+
+    public ViewReclamation(id: number): Observable<HttpResponse<ApiResponse>> {
+        return this.httpClient.get<ApiResponse>(`${this.api}/reclamation/${id}`, { observe: 'response' });
+    }
 }

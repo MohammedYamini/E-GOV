@@ -4,7 +4,7 @@ import { NoAuthGuard } from 'app/core/auth/guards/noAuth.guard';
 import { LayoutComponent } from 'app/layout/layout.component';
 import { InitialDataResolver } from 'app/app.resolvers';
 import { CreateReclamationComponent } from './create-reclamation/create-reclamation.component';
-
+import { ViewReclamationComponent } from './view-reclamationt/view-reclamationt.component';
 // @formatter:off
 /* eslint-disable max-len */
 /* eslint-disable @typescript-eslint/explicit-function-return-type */
@@ -74,6 +74,7 @@ export const appRoutes: Route[] = [
         children: [
             {path: 'reclamation', loadChildren: () => import('app/modules/admin/example/example.module').then(m => m.ExampleModule)},
             {path: 'create-reclamation', component:CreateReclamationComponent},
+            { path: 'view-reclamation/:id', component: ViewReclamationComponent },
         ]
     }
 ];

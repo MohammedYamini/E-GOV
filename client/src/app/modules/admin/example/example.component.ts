@@ -2,6 +2,7 @@ import { Component, ViewEncapsulation, OnInit } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { ReclamationService } from 'app/reclamation.service';
 import { Reclamation } from 'app/reclamation.module';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'example',
@@ -16,23 +17,34 @@ export class ExampleComponent implements OnInit {
         'id',
         'matriculation_interior',
         'matriculation_number',
-        'first_time_in_circulation',
-        'first_use_in_morocco',
-        'mutation',
-        'particular_vehicle',
         'address',
-        'end_of_validity',
-        'type_of_usage',
         'owner',
         'payment_id',
+        'delete',
+        'edit'
     ]
 
-    constructor(private ReclamationService: ReclamationService) {
+    constructor(private ReclamationService: ReclamationService, private router: Router) {
         this.IndexReclamation()
     }
 
     ngOnInit(): void {
 
+    }
+
+    DeleteReclamation(id: number): void {
+        this.ReclamationService.deleteReclamation(id).subscribe({
+            next: (res) =>{
+                console.log(res);
+            },
+            error: (err: HttpErrorResponse) =>{
+                console.log(err);
+            }
+        });
+    }
+
+    ViewReclamation(id: number): void {
+        console.log(id);
     }
 
     IndexReclamation(): void {

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin("http://localhost:4200/")
 public class ReclamationController {
 
     @Autowired
@@ -75,7 +76,7 @@ public class ReclamationController {
                     reclamation.getFirst_use_in_morocco() != null &&
                     reclamation.getOwner() != null &&
                     reclamation.getType_of_usage() != null &&
-                    reclamation.getStart_of_validation() != null) {
+                    reclamation.getParticular_vehicle() != null) {
 
                 check_reclamation.setMatriculation_interior(reclamation.getMatriculation_interior());
                 check_reclamation.setMatriculation_number(reclamation.getMatriculation_number());
@@ -86,7 +87,7 @@ public class ReclamationController {
                 check_reclamation.setFirst_use_in_morocco(reclamation.getFirst_use_in_morocco());
                 check_reclamation.setOwner(reclamation.getOwner());
                 check_reclamation.setType_of_usage(reclamation.getType_of_usage());
-                check_reclamation.setStart_of_validation(reclamation.getStart_of_validation());
+                check_reclamation.setParticular_vehicle(reclamation.getParticular_vehicle());
             }
 
             Reclamation updated_reclamation = reclamationService.UpdateReclamation(check_reclamation);
